@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alexis Nest Hub Test</title>
+  <script src="https://www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+</head>
+<body>
+  <cast-media-player></cast-media-player>
+
+  <script>
+    const context =
+      cast.framework.CastReceiverContext.getInstance();
+
+    console.log("Alexis Nest Hub Test starting");
+
+    context.addEventListener(
+      cast.framework.system.EventType.READY,
+      () => console.log("Nest Hub receiver is ready!")
+    );
+
+    context.start();
+  </script>
+</body>
+</html>
